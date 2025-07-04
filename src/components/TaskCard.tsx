@@ -49,7 +49,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleComplete, onEd
     >
       <div className="flex items-start justify-between">
         <div className="flex-1">
-          {/* Header */}
+          
           <div className="flex items-center space-x-3 mb-3">
             <button
               onClick={() => onToggleComplete(task.id)}
@@ -74,12 +74,11 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleComplete, onEd
             )}
           </div>
 
-          {/* Description */}
           <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">
             {task.description}
           </p>
 
-          {/* Meta Information */}
+          
           <div className="flex items-center space-x-4 text-sm text-slate-500 dark:text-slate-400">
             <div className="flex items-center space-x-1">
               <Calendar className="h-4 w-4" />
@@ -95,13 +94,13 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleComplete, onEd
           </div>
         </div>
 
-        {/* Priority Badge */}
+      
         <div className={`flex items-center space-x-1 px-3 py-1 rounded-full text-sm font-medium ${getPriorityColor(task.priority_score)}`}>
           <span>{getPriorityLabel(task.priority_score)}</span>
         </div>
       </div>
 
-      {/* Actions */}
+      
       <div className="flex items-center justify-end space-x-2 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
         <button
           onClick={() => onEdit(task)}

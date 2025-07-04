@@ -77,7 +77,6 @@ export const Context: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
@@ -96,7 +95,6 @@ export const Context: React.FC = () => {
         </button>
       </div>
 
-      {/* Statistics */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -167,7 +165,6 @@ export const Context: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* AI Recommendations */}
       {taskRecommendations.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -197,7 +194,6 @@ export const Context: React.FC = () => {
         </motion.div>
       )}
 
-      {/* Context Entries */}
       <div className="space-y-4">
         {contextEntries.length > 0 ? (
           contextEntries.map((entry) => (
@@ -207,7 +203,6 @@ export const Context: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               className="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 p-6"
             >
-              {/* Header */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm ${getSourceColor(entry.source_type)}`}>
@@ -223,14 +218,12 @@ export const Context: React.FC = () => {
                 </span>
               </div>
 
-              {/* Content */}
               <div className="mb-4">
                 <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
                   {entry.content}
                 </p>
               </div>
 
-              {/* Keywords */}
               {entry.keywords && entry.keywords.length > 0 && (
                 <div className="mb-4">
                   <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
@@ -249,7 +242,6 @@ export const Context: React.FC = () => {
                 </div>
               )}
 
-              {/* Insights */}
               {entry.processed_insights && (
                 <div className="bg-slate-50 dark:bg-slate-700/50 rounded-lg p-4">
                   <p className="text-sm font-medium text-slate-600 dark:text-slate-400 mb-2">
@@ -274,7 +266,6 @@ export const Context: React.FC = () => {
         )}
       </div>
 
-      {/* Context Form */}
       <ContextForm
         isOpen={isContextFormOpen}
         onClose={() => setIsContextFormOpen(false)}

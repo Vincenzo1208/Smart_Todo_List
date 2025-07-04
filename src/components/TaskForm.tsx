@@ -117,7 +117,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
         className="bg-white dark:bg-slate-800 rounded-xl shadow-xl max-w-2xl w-full max-h-screen overflow-y-auto"
       >
         <div className="p-6">
-          {/* Header */}
+          
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white">
               {editingTask ? 'Edit Task' : 'Create New Task'}
@@ -131,7 +131,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Title */}
+          
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 <FileText className="h-4 w-4 inline mr-2" />
@@ -147,7 +147,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
               />
             </div>
 
-            {/* AI Analysis Button */}
+            
             <div className="flex items-center space-x-3">
               <button
                 type="button"
@@ -169,7 +169,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
               )}
             </div>
 
-            {/* AI Suggestions */}
+            
             {aiSuggestions && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -198,7 +198,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
               </motion.div>
             )}
 
-            {/* Description */}
+          
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Description
@@ -213,7 +213,6 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
               />
             </div>
 
-            {/* Category and Deadline */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
@@ -256,7 +255,6 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
               </div>
             </div>
 
-            {/* Priority and Status */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
@@ -293,7 +291,6 @@ export const TaskForm: React.FC<TaskFormProps> = ({ isOpen, onClose, onSubmit, e
               </div>
             </div>
 
-            {/* Submit Button */}
             <div className="flex items-center justify-end space-x-3 pt-4">
               <button
                 type="button"

@@ -47,7 +47,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
 
     onSubmit(contextData)
     
-    // Reset form
+    
     setFormData({
       content: '',
       source_type: 'notes'
@@ -83,7 +83,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
         className="bg-white dark:bg-slate-800 rounded-xl shadow-xl max-w-2xl w-full max-h-screen overflow-y-auto"
       >
         <div className="p-6">
-          {/* Header */}
+          
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white">
               Add Daily Context
@@ -97,7 +97,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Source Type */}
+            
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Source Type
@@ -125,7 +125,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
               </div>
             </div>
 
-            {/* Content */}
+            
             <div>
               <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
                 Content
@@ -140,7 +140,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
               />
             </div>
 
-            {/* AI Analysis Button */}
+            
             <div className="flex items-center space-x-3">
               <button
                 type="button"
@@ -162,7 +162,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
               )}
             </div>
 
-            {/* AI Analysis Results */}
+           
             {aiAnalysis && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
@@ -214,7 +214,7 @@ export const ContextForm: React.FC<ContextFormProps> = ({ isOpen, onClose, onSub
               </motion.div>
             )}
 
-            {/* Submit Button */}
+            
             <div className="flex items-center justify-end space-x-3 pt-4">
               <button
                 type="button"

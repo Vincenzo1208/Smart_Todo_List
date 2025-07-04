@@ -21,7 +21,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
-      {/* Header */}
+      
       <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -35,7 +35,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
               </h1>
             </div>
 
-            {/* Desktop Navigation */}
+            
             <nav className="hidden md:flex items-center space-x-8">
               {navigation.map((item) => (
                 <button
@@ -52,7 +52,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
               ))}
             </nav>
 
-            {/* Theme Toggle & Mobile Menu */}
+            
             <div className="flex items-center space-x-4">
               <button
                 onClick={toggleTheme}
@@ -65,7 +65,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
                 )}
               </button>
 
-              {/* Mobile menu button */}
+              
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
@@ -80,7 +80,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -110,7 +110,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, currentPage, onPageCha
         )}
       </header>
 
-      {/* Main Content */}
+      
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {children}
       </main>

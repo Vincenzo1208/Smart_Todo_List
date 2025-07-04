@@ -47,12 +47,10 @@ export const Dashboard: React.FC = () => {
   ).length
   const aiEnhancedTasks = tasks.filter(t => t.ai_enhanced).length
 
-  // Recent tasks (last 5)
   const recentTasks = tasks.slice(0, 5)
 
   return (
     <div className="space-y-8">
-      {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-3xl font-bold text-slate-900 dark:text-white">
@@ -142,7 +140,6 @@ export const Dashboard: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* AI Insights */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -179,7 +176,6 @@ export const Dashboard: React.FC = () => {
         </div>
       </motion.div>
 
-      {/* Recent Tasks */}
       <div>
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-4">
           Recent Tasks
@@ -208,7 +204,6 @@ export const Dashboard: React.FC = () => {
         )}
       </div>
 
-      {/* Task Form */}
       <TaskForm
         isOpen={isTaskFormOpen}
         onClose={handleCloseTaskForm}
