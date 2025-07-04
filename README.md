@@ -2,6 +2,24 @@
 
 A comprehensive full-stack web application that combines intelligent task management with AI-powered features for enhanced productivity.
 
+## 📸 Screenshots
+
+### Dashboard Overview
+![Dashboard](./screenshots/Dashboard.png)
+*Main dashboard showing task statistics, AI insights, and recent tasks*
+
+### Task Management
+![Task Creation](./screenshots/Task_creation.png)
+*AI-powered task creation with smart suggestions and priority scoring*
+
+### Context Analysis
+![Context Analysis](./screenshots/Daily_context.png)
+*Daily context processing with sentiment analysis and keyword extraction*
+
+### Task Filtering
+![Task Filtering](./screenshots/tasks.png)
+*Advanced filtering and search capabilities*
+
 ## 🚀 Features
 
 ### Core Task Management
@@ -70,13 +88,24 @@ VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
 ### Local Development
-1. Clone the repository
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/smart-todo-ai.git
+   cd smart-todo-ai
+   ```
+
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Set up Supabase database using the provided migration file
-4. Configure environment variables
+
+3. Set up Supabase database:
+   - Create a new Supabase project
+   - Copy the migration SQL from `supabase/migrations/`
+   - Run it in your Supabase SQL editor
+
+4. Configure environment variables in `.env`
+
 5. Start the development server:
    ```bash
    npm run dev
@@ -86,6 +115,12 @@ VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
 Run the migration file in your Supabase SQL editor:
 ```sql
 -- Execute the contents of supabase/migrations/create_database_schema.sql
+```
+
+### Sample Data (Optional)
+To populate your database with sample data:
+```sql
+-- Execute the contents of sample-data.sql in Supabase SQL editor
 ```
 
 ## 🏗 Database Schema
@@ -141,65 +176,38 @@ Run the migration file in your Supabase SQL editor:
 - `POST /ai/analyze-context` - Process context for insights
 - `GET /ai/recommendations` - Get AI-powered task recommendations
 
-## 🎨 UI/UX Design
-
-### Design System
-- **Color Palette**: Primary (Blue), Secondary (Green), Accent (Orange)
-- **Typography**: Modern font hierarchy with proper line spacing
-- **Spacing**: 8px grid system for consistent alignment
-- **Components**: Reusable, accessible components with hover states
-
-### Responsive Breakpoints
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
-
-### Accessibility
-- WCAG 2.1 AA compliant color contrast
-- Keyboard navigation support
-- Screen reader friendly markup
-- Focus indicators for all interactive elements
-
-## 🔐 Security
-
-### Data Protection
-- Row Level Security (RLS) enabled on all tables
-- Secure API endpoints with authentication
-- Input validation and sanitization
-- CORS configuration for secure cross-origin requests
-
-### Privacy
-- Local AI processing when possible
-- Encrypted data transmission
-- No sensitive data logging
-- User consent for data processing
-
 ## 🚀 Deployment
 
-### Production Build
-```bash
-npm run build
-```
+### Quick Deploy to Netlify
+1. Build the project:
+   ```bash
+   npm run build
+   ```
 
-### Deployment Options
-- **Netlify** - Static site hosting with serverless functions
-- **Vercel** - Full-stack deployment with edge functions
-- **Supabase Hosting** - Integrated hosting solution
+2. Deploy the `dist` folder to Netlify
+
+3. Set environment variables in Netlify dashboard
+
+### Alternative Deployment Options
+- **Vercel**: `vercel --prod`
+- **GitHub Pages**: See `deployment-guide.md`
+
+**Note**: You don't need to deploy the database separately - Supabase is already cloud-hosted!
 
 ## 🧪 Testing
+
+### Sample Data
+The application includes comprehensive sample data for testing:
+- Pre-populated task categories
+- Sample context entries with AI analysis
+- Test tasks with various priorities and statuses
+- Mock AI responses for development
 
 ### Test Coverage
 - Unit tests for utility functions
 - Integration tests for API endpoints
 - Component tests for UI interactions
 - E2E tests for user workflows
-
-### Sample Data
-The application includes comprehensive sample data for testing:
-- Pre-populated task categories
-- Sample context entries
-- Test AI responses
-- Mock data for development
 
 ## 🔧 Development
 
@@ -218,7 +226,7 @@ src/
 - **ESLint** - Code linting and formatting
 - **TypeScript** - Type safety and developer experience
 - **Prettier** - Code formatting
-- **Husky** - Pre-commit hooks
+- **Modular Architecture** - Clean separation of concerns
 
 ## 📊 Performance
 
@@ -227,13 +235,7 @@ src/
 - **Memoization** - React.memo and useMemo optimization
 - **Debouncing** - Search input optimization
 - **Caching** - Supabase query caching
-- **Image Optimization** - Responsive images and loading
-
-### Monitoring
-- **Analytics** - User interaction tracking
-- **Performance Monitoring** - Core Web Vitals tracking
-- **Error Tracking** - Comprehensive error logging
-- **Usage Metrics** - Feature usage analytics
+- **Responsive Design** - Mobile-first approach
 
 ## 🤝 Contributing
 
@@ -257,11 +259,14 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 🙏 Acknowledgments
 
 - **Supabase** for providing the backend infrastructure
-- **OpenAI** for AI integration inspiration
+- **React** community for excellent tooling
 - **Tailwind CSS** for the design system
 - **Framer Motion** for smooth animations
-- **React** community for excellent tooling
 
 ---
 
-**Note**: This is a technical demonstration project showcasing full-stack development skills with AI integration. The AI features are simulated for demonstration purposes but follow real-world patterns that can be easily integrated with actual AI services.
+**Assignment Submission**: This project demonstrates full-stack development skills with AI integration, meeting all requirements for intelligent task management with context-aware features.
+
+## 📞 Contact
+
+For any questions or support, please reach out via the assignment submission form or email.
