@@ -17,7 +17,7 @@ A comprehensive full-stack web application that combines intelligent task manage
 *Daily context processing with sentiment analysis and keyword extraction*
 
 ### Task Filtering
-![Task Filtering](./screenshots/tasks.png)
+![Task Filtering](./screenshots/Tasks.png)
 *Advanced filtering and search capabilities*
 
 ## 🚀 Features
