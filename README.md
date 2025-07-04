@@ -263,10 +263,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Tailwind CSS** for the design system
 - **Framer Motion** for smooth animations
 
----
 
-**Assignment Submission**: This project demonstrates full-stack development skills with AI integration, meeting all requirements for intelligent task management with context-aware features.
-
-## 📞 Contact
-
-For any questions or support, please reach out via the assignment submission form or email.
